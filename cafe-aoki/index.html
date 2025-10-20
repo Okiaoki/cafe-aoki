@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafe Aoki | 自家焙煎と静かな時間</title>
+
+  <meta name="description" content="静けさの中でじっくり味わう、自家焙煎コーヒーと季節のスイーツ。落ち着いた空間で、心がほどけるひとときを。" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cafe Aoki | 自家焙煎と静かな時間" />
+  <meta property="og:description" content="静けさの中でじっくり味わう、自家焙煎コーヒーと季節のスイーツ。落ち着いた空間で、心がほどけるひとときを。" />
+  <meta property="og:image" content="assets/img/coffee.jpg" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Cormorant+Garamond&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Cafe Aoki",
+    "image": "assets/img/coffee.jpg",
+    "servesCuisine": "Coffee, Dessert",
+    "priceRange": "¥¥",
+    "url": "/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <!-- ヘッダー -->
+  <header class="site-header" id="header">
+    <a href="#hero" class="logo glossy-gold" aria-label="Cafe Aoki トップへ">Cafe Aoki</a>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="メニューを開く">☰</button>
+      <ul class="nav-list" id="primary-menu">
+        <li><a href="#concept">コンセプト</a></li>
+        <li><a href="#features">こだわり</a></li>
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#" class="js-open-modal">予約</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ヒーロー -->
+  <main id="main">
+    <section id="hero" class="hero" aria-label="ヒーロー">
+      <h2>ようこそ、Cafe Aokiへ</h2>
+      <p>落ち着いた空間と、香り高い自家焙煎コーヒー。日常から少し離れて、深呼吸する時間をどうぞ。</p>
+      <a href="#reserve" class="btn-gold">席を予約する</a>
+    </section>
+
+    <!-- コンセプト -->
+    <section id="concept" class="section concept reveal" aria-label="コンセプト">
+      <div class="container">
+        <h2 class="glossy-gold">Concept</h2>
+        <p class="lead">
+          Cafe Aoki は、静けさのなかで味が深まる、そんな一杯を大切にしています。肩の力をそっと抜いて、思考がほどける時間を。
+        </p>
+        <p class="sub-lead">A calm space where your mind and senses can rest.</p>
+      </div>
+    </section>
+
+    <!-- こだわり -->
+    <section id="features" class="section features reveal alt" aria-label="こだわり">
+      <div class="container">
+        <h2 class="glossy-gold">Our Features</h2>
+        <div class="grid">
+          <article class="card"><h3>厳選した豆</h3><p>産地とロットを見極め、香りと余韻を楽しめる豆だけを丁寧に焙煎。</p></article>
+          <article class="card"><h3>抽出の美学</h3><p>温度・蒸らし・時間。シンプルだからこそ、1杯ずつ最適解を探ります。</p></article>
+          <article class="card"><h3>落ち着きの空間</h3><p>黒と鈍い金色を基調にした、静かに過ごせる店内設計。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- メニュー -->
+    <section id="menu" class="section menu reveal alt" aria-label="メニュー">
+      <div class="container">
+        <h2 class="glossy-gold">Menu</h2>
+        <div class="grid">
+          <article class="menu-card">
+            <img src="assets/img/menu-coffee.jpg" alt="ブレンドコーヒー" class="zoomable" loading="lazy" decoding="async">
+            <h3>ブレンドコーヒー</h3><p class="price">¥500</p>
+          </article>
+          <article class="menu-card">
+            <img src="assets/img/menu-espresso.jpg" alt="エスプレッソ" class="zoomable" loading="lazy" decoding="async">
+            <h3>エスプレッソ</h3><p class="price">¥450</p>
+          </article>
+          <article class="menu-card">
+            <img src="assets/img/menu-cake.jpg" alt="ベイクドチーズケーキ" class="zoomable" loading="lazy" decoding="async">
+            <h3>チーズケーキ</h3><p class="price">¥600</p>
+          </article>
+          <article class="menu-card">
+            <img src="assets/img/menu-sandwich.jpg" alt="自家製サンドイッチ" class="zoomable" loading="lazy" decoding="async">
+            <h3>サンドイッチ</h3><p class="price">¥700</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクセス -->
+    <section id="access" class="section reveal" aria-label="アクセス">
+      <div class="container">
+        <h2 class="glossy-gold">Access</h2>
+        <p class="lead">〒000-0000 東京都〇〇区〇〇 1-2-3（サンプル）</p>
+        <p>営業時間: 10:00 - 19:00（L.O. 18:30）/ 定休日: 火曜</p>
+        <p>お問い合わせ: <a href="tel:+810000000000">00-0000-0000</a> / <a href="#" class="js-open-modal">予約フォーム</a></p>
+        <div class="map-embed" aria-label="Google マップ">
+          <iframe
+            title="Googleマップ 新宿駅"
+            src="https://www.google.com/maps?q=%E6%96%B0%E5%AE%BF%E9%A7%85&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 予約CTA -->
+    <section id="reserve" class="section cta reveal" aria-label="予約">
+      <div class="container">
+        <h2 class="glossy-gold">ご予約</h2>
+        <p>お席の確保やご相談は、こちらから承ります。</p>
+        <a href="#" class="btn-gold js-open-modal">予約フォームを開く</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer"><small>&copy; 2025 Cafe Aoki</small></footer>
+
+  <!-- 予約モーダル -->
+  <div id="modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reserve-title">
+    <div class="backdrop"></div>
+    <div class="panel">
+      <button id="close-modal" class="close" aria-label="閉じる">×</button>
+      <h3 id="reserve-title" class="glossy-gold">ご予約フォーム</h3>
+      <form id="reserve-form" action="https://formspree.io/f/xdkwllne" method="POST" novalidate>
+        <label for="name">お名前 <span aria-hidden="true">*</span></label>
+        <input id="name" type="text" name="name" autocomplete="name" required>
+
+        <label for="email">メールアドレス <span aria-hidden="true">*</span></label>
+        <input id="email" type="email" name="email" inputmode="email" autocomplete="email" required>
+
+        <label for="people">人数 <span aria-hidden="true">*</span></label>
+        <select id="people" name="people" required>
+          <option value="">選択してください</option>
+          <option>1人</option>
+          <option>2人</option>
+          <option>3人</option>
+          <option>4人</option>
+          <option>5人</option>
+          <option>6人</option>
+          <option>7人</option>
+          <option>8人</option>
+          <option>9人</option>
+          <option>10人</option>
+        </select>
+
+        <label for="datetime">日時 <span aria-hidden="true">*</span></label>
+        <div class="datetime-wrapper">
+          <input type="text" id="datetime" name="datetime" placeholder="日付と時間を選択" required>
+          <span class="calendar-icon" aria-hidden="true">📅</span>
+        </div>
+
+        <label for="message">メッセージ</label>
+        <textarea id="message" name="message" rows="3" placeholder="ご要望など"></textarea>
+
+        <button type="submit" class="btn-gold">送信する</button>
+        <p class="form-note">送信いただいた内容は予約目的にのみ利用します。</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
