@@ -5,23 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cafe Aoki | 自家焙煎と静かな時間</title>
 
-  <meta name="description" content="静けさの中でじっくり味わう、自家焙煎コーヒーと季節のスイーツ。落ち着いた空間で、心がほどけるひとときを。" />
+  <meta name="description" content="静けさの中でじっくり味わう、自家焙煎コーヒーと季節のスイーツ。黒と鈍金の上質な空間で、思考がほどけるひとときを。" />
   <meta name="theme-color" content="#1a1a1a" />
   <meta name="format-detection" content="telephone=no" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Cafe Aoki | 自家焙煎と静かな時間" />
-  <meta property="og:description" content="静けさの中でじっくり味わう、自家焙煎コーヒーと季節のスイーツ。落ち着いた空間で、心がほどけるひとときを。" />
+  <meta property="og:description" content="静けさの中でじっくり味わう、自家焙煎コーヒーと季節のスイーツ。黒と鈍金の上質な空間で、思考がほどけるひとときを。" />
   <meta property="og:image" content="assets/img/coffee.jpg" />
   <meta property="og:locale" content="ja_JP" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Cormorant+Garamond&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:wght@500;600;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
 
@@ -48,76 +47,88 @@
       <ul class="nav-list" id="primary-menu">
         <li><a href="#concept">コンセプト</a></li>
         <li><a href="#features">こだわり</a></li>
-        <li><a href="#menu">メニュー</a></li>
+        <li><a href="menu.html">メニュー</a></li>
         <li><a href="#access">アクセス</a></li>
         <li><a href="#" class="js-open-modal">予約</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ヒーロー -->
+  <!-- メイン -->
   <main id="main">
-    <section id="hero" class="hero" aria-label="ヒーロー">
-      <h2>ようこそ、Cafe Aokiへ</h2>
-      <p>落ち着いた空間と、香り高い自家焙煎コーヒー。日常から少し離れて、深呼吸する時間をどうぞ。</p>
-      <a href="#reserve" class="btn-gold">席を予約する</a>
+    <!-- Hero: 100vh 動的背景（動画 or パララックス） -->
+    <section id="hero" class="hero" aria-label="ヒーロー" data-section="hero">
+      <div class="hero__media" aria-hidden="true">
+        <!-- <video class="hero__video" src="assets/video/hero.mp4" playsinline muted loop preload="metadata" poster="assets/img/coffee.jpg"></video> -->
+        <div class="hero__parallax" style="background-image: url('assets/img/coffee.jpg')"></div>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content reveal">
+        <div class="hero__logo logo glossy-gold" aria-label="Cafe Aoki">Cafe Aoki</div>
+        <h1 class="hero__title">Quietly Crafted. Richly Remembered.</h1>
+        <p class="hero__subtitle">自家焙煎の香りと、鈍い金が灯る空間で。</p>
+        <a href="#reserve" class="btn-gold hero__cta">席を予約する</a>
+      </div>
+      <button class="hero__scroll-indicator" aria-label="次のセクションへスクロール">Scroll</button>
     </section>
 
-    <!-- コンセプト -->
-    <section id="concept" class="section concept reveal" aria-label="コンセプト">
+    <!-- Concept -->
+    <section id="concept" class="section section--angled concept reveal" aria-label="コンセプト" data-section="concept">
       <div class="container">
         <h2 class="glossy-gold">Concept</h2>
-        <p class="lead">
-          Cafe Aoki は、静けさのなかで味が深まる、そんな一杯を大切にしています。肩の力をそっと抜いて、思考がほどける時間を。
-        </p>
+        <p class="lead">Cafe Aoki は、静けさの中で味が深まる、そんな一杯を大切にしています。肩の力をそっと抜いて、思考がほどける時間を。</p>
         <p class="sub-lead">A calm space where your mind and senses can rest.</p>
       </div>
     </section>
 
-    <!-- こだわり -->
-    <section id="features" class="section features reveal alt" aria-label="こだわり">
+    <!-- Features -->
+    <section id="features" class="section section--angled features reveal alt" aria-label="こだわり" data-section="features">
       <div class="container">
         <h2 class="glossy-gold">Our Features</h2>
         <div class="grid">
-          <article class="card"><h3>厳選した豆</h3><p>産地とロットを見極め、香りと余韻を楽しめる豆だけを丁寧に焙煎。</p></article>
-          <article class="card"><h3>抽出の美学</h3><p>温度・蒸らし・時間。シンプルだからこそ、1杯ずつ最適解を探ります。</p></article>
-          <article class="card"><h3>落ち着きの空間</h3><p>黒と鈍い金色を基調にした、静かに過ごせる店内設計。</p></article>
+          <article class="card" data-feature="beans" role="button" tabindex="0"><h3>厳選した豆</h3><p>香りと余韻を磨くための、出会いと選別。</p></article>
+          <article class="card" data-feature="brewing" role="button" tabindex="0"><h3>抽出の美学</h3><p>静かな所作が、澄んだ一杯をつくる。</p></article>
+          <article class="card" data-feature="space" role="button" tabindex="0"><h3>落ち着きの空間</h3><p>黒と鈍金の陰影が、時間を深くする。</p></article>
         </div>
       </div>
     </section>
 
-    <!-- メニュー -->
-    <section id="menu" class="section menu reveal alt" aria-label="メニュー">
-      <div class="container">
+    <!-- Menu (ホームの簡易グリッド) -->
+    <section id="menu" class="section section--angled menu reveal alt" aria-label="メニュー" data-section="menu">
+      <div class="container container--wide">
         <h2 class="glossy-gold">Menu</h2>
-        <div class="grid">
-          <article class="menu-card">
-            <img src="assets/img/menu-coffee.jpg" alt="ブレンドコーヒー" class="zoomable" loading="lazy" decoding="async">
-            <h3>ブレンドコーヒー</h3><p class="price">¥500</p>
+        <p class="lead">一部のメニューをご紹介。全てのメニューは下のボタンからご覧いただけます。</p>
+        <div class="menu-grid">
+          <article class="menu-card" onclick="location.href='menu.html'" role="link" tabindex="0" aria-label="ブレンドコーヒー 詳細へ">
+            <img src="assets/img/menu-coffee.jpg" alt="ブレンドコーヒー" loading="lazy" decoding="async">
+            <div class="menu-meta"><h3>ブレンドコーヒー</h3><p class="price">¥500</p></div>
           </article>
-          <article class="menu-card">
-            <img src="assets/img/menu-espresso.jpg" alt="エスプレッソ" class="zoomable" loading="lazy" decoding="async">
-            <h3>エスプレッソ</h3><p class="price">¥450</p>
+          <article class="menu-card" onclick="location.href='menu.html'" role="link" tabindex="0" aria-label="エスプレッソ 詳細へ">
+            <img src="assets/img/menu-espresso.jpg" alt="エスプレッソ" loading="lazy" decoding="async">
+            <div class="menu-meta"><h3>エスプレッソ</h3><p class="price">¥450</p></div>
           </article>
-          <article class="menu-card">
-            <img src="assets/img/menu-cake.jpg" alt="ベイクドチーズケーキ" class="zoomable" loading="lazy" decoding="async">
-            <h3>チーズケーキ</h3><p class="price">¥600</p>
+          <article class="menu-card" onclick="location.href='menu.html'" role="link" tabindex="0" aria-label="チーズケーキ 詳細へ">
+            <img src="assets/img/menu-cake.jpg" alt="ベイクドチーズケーキ" loading="lazy" decoding="async">
+            <div class="menu-meta"><h3>チーズケーキ</h3><p class="price">¥600</p></div>
           </article>
-          <article class="menu-card">
-            <img src="assets/img/menu-sandwich.jpg" alt="自家製サンドイッチ" class="zoomable" loading="lazy" decoding="async">
-            <h3>サンドイッチ</h3><p class="price">¥700</p>
+          <article class="menu-card" onclick="location.href='menu.html'" role="link" tabindex="0" aria-label="サンドイッチ 詳細へ">
+            <img src="assets/img/menu-sandwich.jpg" alt="自家製サンドイッチ" loading="lazy" decoding="async">
+            <div class="menu-meta"><h3>サンドイッチ</h3><p class="price">¥700</p></div>
           </article>
+        </div>
+        <div class="menu-cta">
+          <a href="menu.html" class="btn-gold">全メニューを見る</a>
         </div>
       </div>
     </section>
 
-    <!-- アクセス -->
-    <section id="access" class="section reveal" aria-label="アクセス">
+    <!-- Access -->
+    <section id="access" class="section section--angled reveal" aria-label="アクセス" data-section="access">
       <div class="container">
         <h2 class="glossy-gold">Access</h2>
-        <p class="lead">〒000-0000 東京都〇〇区〇〇 1-2-3（サンプル）</p>
-        <p>営業時間: 10:00 - 19:00（L.O. 18:30）/ 定休日: 火曜</p>
-        <p>お問い合わせ: <a href="tel:+810000000000">00-0000-0000</a> / <a href="#" class="js-open-modal">予約フォーム</a></p>
+        <p class="lead">〒00-0000 東京都新宿区1-2-3 サンプルビル</p>
+        <p>営業時間: 10:00 - 19:00（L.O. 18:30） 定休日: 火曜</p>
+        <p>お問合せ: <a href="tel:+810000000000">00-0000-0000</a> / <a href="#" class="js-open-modal">予約フォーム</a></p>
         <div class="map-embed" aria-label="Google マップ">
           <iframe
             title="Googleマップ 新宿駅"
@@ -131,16 +142,16 @@
     </section>
 
     <!-- 予約CTA -->
-    <section id="reserve" class="section cta reveal" aria-label="予約">
+    <section id="reserve" class="section section--angled cta reveal" aria-label="予約" data-section="reserve">
       <div class="container">
         <h2 class="glossy-gold">ご予約</h2>
-        <p>お席の確保やご相談は、こちらから承ります。</p>
+        <p>お席の確保やご相談など、こちらから承ります。</p>
         <a href="#" class="btn-gold js-open-modal">予約フォームを開く</a>
       </div>
     </section>
   </main>
 
-  <!-- フッター -->
+  <!-- フッター（最小化） -->
   <footer class="site-footer"><small>&copy; 2025 Cafe Aoki</small></footer>
 
   <!-- 予約モーダル -->
@@ -181,8 +192,17 @@
         <textarea id="message" name="message" rows="3" placeholder="ご要望など"></textarea>
 
         <button type="submit" class="btn-gold">送信する</button>
-        <p class="form-note">送信いただいた内容は予約目的にのみ利用します。</p>
+        <p class="form-note">送信いただいた情報はご予約の連絡のみに利用します。</p>
       </form>
+    </div>
+  </div>
+
+  <!-- Features モーダル -->
+  <div id="feature-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="feature-title">
+    <div class="backdrop"></div>
+    <div class="panel">
+      <button id="feature-close" class="close" aria-label="閉じる">×</button>
+      <div id="feature-content" class="feature-content"></div>
     </div>
   </div>
 
