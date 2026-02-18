@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu | Cafe Aoki</title>
+  <meta name="description" content="Cafe Aokiのメニュー。大きな写真と共に、こだわりの自家焙煎コーヒーやスイーツを丁寧にご紹介。" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Menu | Cafe Aoki" />
+  <meta property="og:description" content="大きな写真と共に、こだわりの自家焙煎コーヒーやスイーツをご紹介。" />
+  <meta property="og:image" content="assets/img/coffee.jpg" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Perf: Keep style but reduce font transfer by trimming weights. -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@500;600&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Perf: flatpickr is loaded on-demand when the reserve modal opens. -->
+</head>
+<body class="menu-page">
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <header class="site-header" id="header">
+    <a href="index.html#hero" class="logo glossy-gold" aria-label="Cafe Aoki トップへ">Cafe Aoki</a>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="メニューを開く">☰</button>
+      <ul class="nav-list" id="primary-menu">
+        <li><a href="index.html#concept">コンセプト</a></li>
+        <li><a href="index.html#features">こだわり</a></li>
+        <li><a href="menu.html" aria-current="page">メニュー</a></li>
+        <li><a href="index.html#access">アクセス</a></li>
+        <li><a href="#" class="js-open-modal">予約</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Menu Hero -->
+    <section class="menu-hero" data-section="menu-hero" aria-label="メニューヒーロー">
+      <div class="menu-hero__media" aria-hidden="true">
+        <div class="menu-hero__parallax" style="background-image: url('assets/img/about-interior.jpg')"></div>
+        <div class="menu-hero__overlay"></div>
+      </div>
+      <div class="menu-hero__content reveal">
+        <h1 class="menu-hero__title">Our Menu</h1>
+        <p class="menu-hero__subtitle">素材の声を聞き、香りと余韻を磨く。</p>
+        <a href="#" class="btn-gold js-open-modal menu-hero__cta">席を予約する</a>
+      </div>
+    </section>
+
+    <!-- Menu List -->
+    <section class="section section--angled menu-list reveal" data-section="menu-list" aria-label="メニュー一覧">
+      <div class="container">
+        <div class="dish-grid">
+          <!-- ブレンドコーヒー -->
+          <article class="dish">
+            <div class="dish-media">
+              <!-- Perf: responsive sources reduce transfer/decode on mobile while preserving visuals. -->
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="assets/img/menu-coffee-640.webp 640w, assets/img/menu-coffee-1200.webp 1200w"
+                  sizes="(max-width: 960px) 100vw, 58vw">
+                <img
+                  src="assets/img/menu-coffee-1200.jpg"
+                  srcset="assets/img/menu-coffee-640.jpg 640w, assets/img/menu-coffee-1200.jpg 1200w"
+                  sizes="(max-width: 960px) 100vw, 58vw"
+                  width="1200"
+                  height="800"
+                  alt="ブレンドコーヒーの大きな画像"
+                  loading="lazy"
+                  decoding="async">
+              </picture>
+            </div>
+            <div class="dish-content">
+              <h2 class="dish-title">ブレンドコーヒー <span class="dish-price">¥500</span></h2>
+              <p class="dish-desc">複数産地の豆をブレンドし、甘さ・コク・香りの調和を追求。毎日飲みたくなる“ちょうどよさ”を大切に焙煎・抽出します。</p>
+              <ul class="dish-points">
+                <li>中深煎りで滑らかな口当たり</li>
+                <li>カカオのような余韻とやわらかな甘み</li>
+                <li>ミルクやスイーツとの相性も抜群</li>
+              </ul>
+              <div class="dish-tags">
+                <span class="badge">中深煎り</span>
+                <span class="badge">ハウスブレンド</span>
+                <span class="badge">バランス型</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- エスプレッソ -->
+          <article class="dish alt">
+            <div class="dish-media">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="assets/img/menu-espresso-640.webp 640w, assets/img/menu-espresso-1200.webp 1200w"
+                  sizes="(max-width: 960px) 100vw, 58vw">
+                <img
+                  src="assets/img/menu-espresso-1200.jpg"
+                  srcset="assets/img/menu-espresso-640.jpg 640w, assets/img/menu-espresso-1200.jpg 1200w"
+                  sizes="(max-width: 960px) 100vw, 58vw"
+                  width="1200"
+                  height="800"
+                  alt="エスプレッソの大きな画像"
+                  loading="lazy"
+                  decoding="async">
+              </picture>
+            </div>
+            <div class="dish-content">
+              <h2 class="dish-title">エスプレッソ <span class="dish-price">¥450</span></h2>
+              <p class="dish-desc">短時間で抽出した濃密な一杯。力強い香味の奥に、果実味やチョコレートのニュアンスが層をなします。</p>
+              <ul class="dish-points">
+                <li>厚みのあるクレマと芳醇な香り</li>
+                <li>ダブルショットで満足感のある味わい</li>
+                <li>アメリカーノやラテへのアレンジも好相性</li>
+              </ul>
+              <div class="dish-tags">
+                <span class="badge">深煎り</span>
+                <span class="badge">濃厚</span>
+                <span class="badge">短時間抽出</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- チーズケーキ -->
+          <article class="dish">
+            <div class="dish-media">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="assets/img/menu-cake-640.webp 640w, assets/img/menu-cake-1200.webp 1200w"
+                  sizes="(max-width: 960px) 100vw, 58vw">
+                <img
+                  src="assets/img/menu-cake-1200.jpg"
+                  srcset="assets/img/menu-cake-640.jpg 640w, assets/img/menu-cake-1200.jpg 1200w"
+                  sizes="(max-width: 960px) 100vw, 58vw"
+                  width="1200"
+                  height="800"
+                  alt="ベイクドチーズケーキの大きな画像"
+                  loading="lazy"
+                  decoding="async">
+              </picture>
+            </div>
+            <div class="dish-content">
+              <h2 class="dish-title">ベイクドチーズケーキ <span class="dish-price">¥600</span></h2>
+              <p class="dish-desc">低温でじっくり焼き上げ、口溶けの良い濃厚なチーズ感を実現。コーヒーの苦味と重なって、余韻まで美味しい。</p>
+              <ul class="dish-points">
+                <li>クリーミーで上品な甘さ</li>
+                <li>レモンの酸味が後味を引き締める</li>
+                <li>ブレンド・エスプレッソどちらとも好相性</li>
+              </ul>
+              <div class="dish-tags">
+                <span class="badge">自家製</span>
+                <span class="badge">濃厚</span>
+                <span class="badge">ペアリング◎</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- サンドイッチ -->
+          <article class="dish alt">
+            <div class="dish-media">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="assets/img/menu-sandwich-640.webp 640w, assets/img/menu-sandwich-1200.webp 1200w"
+                  sizes="(max-width: 960px) 100vw, 58vw">
+                <img
+                  src="assets/img/menu-sandwich-1200.jpg"
+                  srcset="assets/img/menu-sandwich-640.jpg 640w, assets/img/menu-sandwich-1200.jpg 1200w"
+                  sizes="(max-width: 960px) 100vw, 58vw"
+                  width="1200"
+                  height="800"
+                  alt="自家製サンドイッチの大きな画像"
+                  loading="lazy"
+                  decoding="async">
+              </picture>
+            </div>
+            <div class="dish-content">
+              <h2 class="dish-title">自家製サンドイッチ <span class="dish-price">¥700</span></h2>
+              <p class="dish-desc">香ばしく焼いたパンと新鮮な野菜、旨みを引き立てる自家製ソース。軽食としても満足できる一皿です。</p>
+              <ul class="dish-points">
+                <li>具材の食感が生きるバランス</li>
+                <li>午後のコーヒーブレイクにもぴったり</li>
+                <li>テイクアウトに対応（混雑時はお時間を頂きます）</li>
+              </ul>
+              <div class="dish-tags">
+                <span class="badge">フレッシュ</span>
+                <span class="badge">満足感</span>
+                <span class="badge">テイクアウト可</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer"><small>&copy; 2025 Cafe Aoki</small></footer>
+
+  <!-- 予約モーダル -->
+  <div id="modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reserve-title">
+    <div class="backdrop"></div>
+    <div class="panel">
+      <button id="close-modal" class="close" aria-label="閉じる">×</button>
+      <h3 id="reserve-title" class="glossy-gold">ご予約フォーム</h3>
+      <form id="reserve-form" action="https://formspree.io/f/xdkwllne" method="POST" novalidate>
+        <label for="name">お名前 <span aria-hidden="true">*</span></label>
+        <input id="name" type="text" name="name" autocomplete="name" required>
+
+        <label for="email">メールアドレス <span aria-hidden="true">*</span></label>
+        <input id="email" type="email" name="email" inputmode="email" autocomplete="email" required>
+
+        <label for="people">人数 <span aria-hidden="true">*</span></label>
+        <select id="people" name="people" required>
+          <option value="">選択してください</option>
+          <option>1人</option>
+          <option>2人</option>
+          <option>3人</option>
+          <option>4人</option>
+          <option>5人</option>
+          <option>6人</option>
+          <option>7人</option>
+          <option>8人</option>
+          <option>9人</option>
+          <option>10人</option>
+        </select>
+
+        <label for="datetime">日時 <span aria-hidden="true">*</span></label>
+        <div class="datetime-wrapper">
+          <input type="text" id="datetime" name="datetime" placeholder="日付と時間を選択" required>
+          <span class="calendar-icon" aria-hidden="true">📅</span>
+        </div>
+
+        <label for="message">メッセージ</label>
+        <textarea id="message" name="message" rows="3" placeholder="ご要望など"></textarea>
+
+        <button type="submit" class="btn-gold">送信する</button>
+        <p class="form-note">送信いただいた情報はご予約の連絡のみに利用します。</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // メニューの画像を拡大対象に
+    document.querySelectorAll('.dish-media img').forEach(function(img){ img.classList.add('zoomable'); });
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
