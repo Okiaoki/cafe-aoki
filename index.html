@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafe Aoki | 自家焙煎と静かな時間</title>
+
+  <meta name="description" content="静けさの中でじっくり味わう、自家焙煎コーヒーと季節のスイーツ。黒と鈍金の上質な空間で、思考がほどけるひとときを。" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cafe Aoki | 自家焙煎と静かな時間" />
+  <meta property="og:description" content="静けさの中でじっくり味わう、自家焙煎コーヒーと季節のスイーツ。黒と鈍金の上質な空間で、思考がほどけるひとときを。" />
+  <meta property="og:image" content="assets/img/coffee.jpg" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400&family=Playfair+Display:wght@500;600&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Cafe Aoki",
+    "image": "assets/img/coffee.jpg",
+    "servesCuisine": "Coffee, Dessert",
+    "priceRange": "¥¥",
+    "url": "/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <!-- ヘッダー -->
+  <header class="site-header" id="header">
+    <a href="#hero" class="logo glossy-gold" aria-label="Cafe Aoki トップへ">Cafe Aoki</a>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="メニューを開く">☰</button>
+      <ul class="nav-list" id="primary-menu">
+        <li><a href="#concept">コンセプト</a></li>
+        <li><a href="#features">こだわり</a></li>
+        <li><a href="menu.html">メニュー</a></li>
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#" class="js-open-modal">予約</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- メイン -->
+  <main id="main">
+    <!-- Hero: 100vh 動的背景（動画 or パララックス） -->
+    <section id="hero" class="hero" aria-label="ヒーロー" data-section="hero">
+      <div class="hero__media" aria-hidden="true">
+        <!-- <video class="hero__video" src="assets/video/hero.mp4" playsinline muted loop preload="metadata" poster="assets/img/coffee.jpg"></video> -->
+        <div class="hero__parallax" style="background-image: url('assets/img/coffee.jpg')"></div>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content reveal">
+        <div class="hero__logo logo glossy-gold" aria-label="Cafe Aoki">Cafe Aoki</div>
+        <h1 class="hero__title">Quietly Crafted. Richly Remembered.</h1>
+        <a href="#" class="btn-gold js-open-modal hero__cta">席を予約する</a>
+      </div>
+      <button class="hero__scroll-indicator" aria-label="次のセクションへスクロール">Scroll</button>
+    </section>
+
+    <!-- Concept -->
+    <section id="concept" class="section section--angled concept reveal" aria-label="コンセプト" data-section="concept">
+      <div class="container">
+        <div class="concept-grid">
+          <div class="concept-text">
+            <h2 class="glossy-gold">Concept</h2>
+            <p class="lead">Cafe Aoki は、静けさの中で味が深まる、そんな一杯を大切にしています。肩の力をそっと抜いて、思考がほどける時間を。</p>
+            <p class="sub-lead">A calm space where your mind and senses can rest.</p>
+          </div>
+          <div class="concept-img">
+            <picture>
+              <source srcset="assets/img/about-interior.webp" type="image/webp">
+              <img src="assets/img/about-interior.jpg" alt="Cafe Aokiの店内" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Staff -->
+    <section id="staff" class="section section--angled staff reveal alt" aria-label="スタッフ" data-section="staff">
+      <div class="container">
+        <h2 class="glossy-gold">Staff</h2>
+        <div class="staff-card">
+          <div class="staff-photo">
+            <picture>
+              <source srcset="assets/img/owner.webp" type="image/webp">
+              <img src="assets/img/owner.jpg" alt="オーナー Aoki" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="staff-body">
+            <h3>Aoki</h3>
+            <p class="staff-role">Owner / Barista</p>
+            <p class="staff-desc">コーヒーの産地を巡り、一杯に宿る風土と物語に惹かれてこの店を始めました。静かな空間で、豆と対話するような時間を一緒に過ごせたら嬉しいです。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section section--angled features reveal alt" aria-label="こだわり" data-section="features">
+      <div class="container">
+        <h2 class="glossy-gold">Our Features</h2>
+        <div class="grid">
+          <article class="card" data-feature="beans" role="button" tabindex="0">
+            <svg class="card-icon" viewBox="0 0 32 32" fill="none" stroke="var(--gold)" stroke-width="1.5" aria-hidden="true"><ellipse cx="16" cy="16" rx="7" ry="11"/><path d="M13 8c1.8 2.5 1.8 10 0 16"/></svg>
+            <h3>厳選した豆</h3><p>香りと余韻を磨くための、出会いと選別。</p>
+          </article>
+          <article class="card" data-feature="brewing" role="button" tabindex="0">
+            <svg class="card-icon" viewBox="0 0 32 32" fill="none" stroke="var(--gold)" stroke-width="1.5" aria-hidden="true"><path d="M10 6h12l-4 14H14z"/><path d="M14 20v5a2 2 0 002 2 2 2 0 002-2v-5"/><line x1="16" y1="2" x2="16" y2="5"/></svg>
+            <h3>抽出の美学</h3><p>静かな所作が、澄んだ一杯をつくる。</p>
+          </article>
+          <article class="card" data-feature="space" role="button" tabindex="0">
+            <svg class="card-icon" viewBox="0 0 32 32" fill="none" stroke="var(--gold)" stroke-width="1.5" aria-hidden="true"><path d="M12 14a4 4 0 018 0c0 2.5-2 4-2.5 6h-3c-.5-2-2.5-3.5-2.5-6z"/><rect x="13.5" y="21" width="5" height="2" rx="1"/><path d="M16 8V4M10 10L8 8M22 10l2-2"/></svg>
+            <h3>落ち着きの空間</h3><p>黒と鈍金の陰影が、時間を深くする。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu (ホームの簡易グリッド) -->
+    <section id="menu" class="section section--angled menu reveal alt" aria-label="メニュー" data-section="menu">
+      <div class="container container--wide">
+        <h2 class="glossy-gold">Menu</h2>
+        <p class="lead">一部のメニューをご紹介。全てのメニューは下のボタンからご覧いただけます。</p>
+        <div class="menu-grid">
+          <a href="menu.html" class="menu-card" aria-label="ブレンドコーヒー 詳細へ">
+            <picture>
+              <source srcset="assets/img/menu-coffee.webp" type="image/webp">
+              <img src="assets/img/menu-coffee.jpg" alt="ブレンドコーヒー" loading="lazy" decoding="async">
+            </picture>
+            <div class="menu-meta"><h3>ブレンドコーヒー</h3><p class="price">¥500</p></div>
+          </a>
+          <a href="menu.html" class="menu-card" aria-label="エスプレッソ 詳細へ">
+            <picture>
+              <source srcset="assets/img/menu-espresso.webp" type="image/webp">
+              <img src="assets/img/menu-espresso.jpg" alt="エスプレッソ" loading="lazy" decoding="async">
+            </picture>
+            <div class="menu-meta"><h3>エスプレッソ</h3><p class="price">¥450</p></div>
+          </a>
+          <a href="menu.html" class="menu-card" aria-label="チーズケーキ 詳細へ">
+            <picture>
+              <source srcset="assets/img/menu-cake.webp" type="image/webp">
+              <img src="assets/img/menu-cake.jpg" alt="ベイクドチーズケーキ" loading="lazy" decoding="async">
+            </picture>
+            <div class="menu-meta"><h3>チーズケーキ</h3><p class="price">¥600</p></div>
+          </a>
+          <a href="menu.html" class="menu-card" aria-label="サンドイッチ 詳細へ">
+            <picture>
+              <source srcset="assets/img/menu-sandwich.webp" type="image/webp">
+              <img src="assets/img/menu-sandwich.jpg" alt="自家製サンドイッチ" loading="lazy" decoding="async">
+            </picture>
+            <div class="menu-meta"><h3>サンドイッチ</h3><p class="price">¥700</p></div>
+          </a>
+        </div>
+        <div class="menu-cta">
+          <a href="menu.html" class="btn-gold">全メニューを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Access -->
+    <section id="access" class="section section--angled reveal" aria-label="アクセス" data-section="access">
+      <div class="container">
+        <h2 class="glossy-gold">Access</h2>
+        <p class="lead">〒00-0000 東京都新宿区1-2-3 サンプルビル</p>
+        <p>営業時間: 10:00 - 19:00（L.O. 18:30） 定休日: 火曜</p>
+        <p>お問合せ: <a href="tel:+81-3-0000-0000">03-0000-0000</a> / <a href="#" class="js-open-modal">予約フォーム</a></p>
+        <div class="map-embed" aria-label="Google マップ">
+          <iframe
+            title="Googleマップ 新宿駅"
+            src="https://www.google.com/maps?q=%E6%96%B0%E5%AE%BF%E9%A7%85&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 予約CTA -->
+    <section id="reserve" class="section section--angled cta reveal" aria-label="予約" data-section="reserve">
+      <div class="container">
+        <h2 class="glossy-gold">ご予約</h2>
+        <p>お席の確保やご相談など、こちらから承ります。</p>
+        <a href="#" class="btn-gold js-open-modal">予約フォームを開く</a>
+      </div>
+    </section>
+    <!-- SNS -->
+    <section id="sns" class="section section--angled sns reveal" aria-label="SNS" data-section="sns">
+      <div class="container">
+        <h2 class="glossy-gold">Follow Us</h2>
+        <p class="lead">最新のメニューや店内の雰囲気をお届けしています。</p>
+        <div class="sns-icons">
+          <a href="#" class="sns-icon" aria-label="Instagram">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="sns-icon" aria-label="X (Twitter)">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="sns-icon" aria-label="LINE">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.83 2 10.5c0 4.18 3.7 7.68 8.7 8.35.34.07.8.22.92.51.1.26.07.67.03.94l-.15.88c-.04.27-.2 1.05.92.57s6.13-3.61 8.36-6.18C22.6 13.5 22 11.9 22 10.5 22 5.83 17.52 2 12 2z"/></svg>
+          </a>
+          <a href="#" class="sns-icon" aria-label="Facebook">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+        <div class="sns-timeline">
+          <p class="sns-timeline-label">Latest Posts</p>
+          <div class="sns-grid" aria-label="SNS投稿ギャラリー">
+            <div class="sns-grid-track">
+              <img src="assets/img/sns-1.webp" alt="コーヒーとチーズケーキ" loading="lazy" decoding="async">
+              <img src="assets/img/sns-2.webp" alt="焙煎中のコーヒー豆" loading="lazy" decoding="async">
+              <img src="assets/img/sns-3.webp" alt="自家製サンドイッチ" loading="lazy" decoding="async">
+              <img src="assets/img/menu-coffee.webp" alt="" loading="lazy" decoding="async">
+              <img src="assets/img/about-interior.webp" alt="" loading="lazy" decoding="async">
+              <img src="assets/img/coffee.webp" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="sns-grid-track" aria-hidden="true">
+              <img src="assets/img/sns-1.webp" alt="" loading="lazy" decoding="async">
+              <img src="assets/img/sns-2.webp" alt="" loading="lazy" decoding="async">
+              <img src="assets/img/sns-3.webp" alt="" loading="lazy" decoding="async">
+              <img src="assets/img/menu-coffee.webp" alt="" loading="lazy" decoding="async">
+              <img src="assets/img/about-interior.webp" alt="" loading="lazy" decoding="async">
+              <img src="assets/img/coffee.webp" alt="" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <p class="sns-note">※ 各SNSリンク・タイムラインは実際のアカウントに差し替え可能です</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p class="footer-info">営業時間 10:00–19:00 / 定休日 火曜 / 東京都新宿区</p>
+    <small>&copy; <span class="js-year">2025</span> Cafe Aoki</small>
+  </footer>
+
+  <!-- 予約モーダル -->
+  <div id="modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reserve-title">
+    <div class="backdrop"></div>
+    <div class="panel">
+      <button id="close-modal" class="close" aria-label="閉じる">×</button>
+      <h3 id="reserve-title" class="glossy-gold">ご予約フォーム</h3>
+      <form id="reserve-form" action="https://formspree.io/f/xdkwllne" method="POST" novalidate>
+        <label for="name">お名前 <span aria-hidden="true">*</span></label>
+        <input id="name" type="text" name="name" autocomplete="name" required>
+
+        <label for="email">メールアドレス <span aria-hidden="true">*</span></label>
+        <input id="email" type="email" name="email" inputmode="email" autocomplete="email" required>
+
+        <label for="people">人数 <span aria-hidden="true">*</span></label>
+        <select id="people" name="people" required>
+          <option value="">選択してください</option>
+          <option>1人</option>
+          <option>2人</option>
+          <option>3人</option>
+          <option>4人</option>
+          <option>5人</option>
+          <option>6人</option>
+          <option>7人</option>
+          <option>8人</option>
+          <option>9人</option>
+          <option>10人</option>
+        </select>
+
+        <label for="datetime">日時 <span aria-hidden="true">*</span></label>
+        <div class="datetime-wrapper">
+          <input type="text" id="datetime" name="datetime" placeholder="日付と時間を選択" required>
+          <span class="calendar-icon" aria-hidden="true">📅</span>
+        </div>
+
+        <label for="message">メッセージ</label>
+        <textarea id="message" name="message" rows="3" placeholder="ご要望など"></textarea>
+
+        <button type="submit" class="btn-gold">送信する</button>
+        <p class="form-note">送信いただいた情報はご予約の連絡のみに利用します。</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Features モーダル -->
+  <div id="feature-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="feature-title">
+    <div class="backdrop"></div>
+    <div class="panel">
+      <button id="feature-close" class="close" aria-label="閉じる">×</button>
+      <div id="feature-content" class="feature-content"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top" aria-label="ページの先頭へ戻る">↑</button>
+
+  <!-- JS -->
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
