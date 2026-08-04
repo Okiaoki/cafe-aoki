@@ -1,0 +1,14 @@
+/* ============================================================
+   CAFE AOKI — page-access.css（access.html専用の微調整）
+   base.cssの既存トークンのみ使用（新しい色・フォント・影・角丸なし）
+   ============================================================ */
+
+/* ---------- 地図埋め込み ---------- */
+.map-embed{padding-block:0 var(--sec)}
+.map-embed iframe{display:block;width:100%;background:var(--bg-warm)}
+
+/* ---------- ご利用について（リスト風の段落） ---------- */
+.notes{padding-block:var(--sec)}
+.notes-list{margin-top:28px;max-width:760px}
+.notes-list p{margin:0;padding:16px 4px;border-top:1px solid var(--line);font-size:15px;letter-spacing:.02em}
+.notes-list p:last-child{border-bottom:1px solid var(--line)}

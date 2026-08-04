@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sumiyakastudio.github.io/cafe-aoki/sitemap.xml

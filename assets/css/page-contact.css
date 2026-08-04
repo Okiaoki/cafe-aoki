@@ -1,0 +1,25 @@
+/* ============================================================
+   CAFE AOKI — page-contact.css（contact.html専用の微調整）
+   既存トークン（base.css）のみ使用。新しい色・フォント・影・角丸なし
+   ============================================================ */
+
+/* リード + フォーム */
+.contact-sec{padding-block:clamp(32px,4vw,56px) var(--sec-lg)}
+.contact-sec .lead{margin-bottom:clamp(28px,3.5vw,44px)}
+.contact-sec .form-done{max-width:720px}
+
+/* FAQ */
+.faq{background:var(--bg-warm);padding-block:var(--sec)}
+.faq .upper{margin-bottom:clamp(20px,2.5vw,32px)}
+.faq-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(20px,2.6vw,34px) clamp(24px,3vw,48px);
+}
+.faq-item{border-top:1px solid var(--line);padding-top:18px}
+.faq-item dt{font-weight:700;letter-spacing:.04em}
+.faq-item dd{margin-top:8px;font-size:14.5px;line-height:2;max-width:56ch}
+
+@media (max-width:767px){
+  .faq-list{grid-template-columns:1fr}
+}

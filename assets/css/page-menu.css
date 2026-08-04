@@ -1,0 +1,14 @@
+/* ============================================================
+   CAFE AOKI — page-menu.css（menu.html専用・base.css既存トークンのみ使用）
+   ============================================================ */
+
+/* 注記（page-head直下の小さめ段落） */
+.menu-note{padding-block:clamp(20px,2.6vw,30px) 0}
+.menu-note p{font-size:13px;letter-spacing:.04em;line-height:2;opacity:.72;max-width:60ch}
+
+/* カテゴリセクション（COFFEE / SWEETS / FOOD） */
+.menu-section{padding-block:var(--sec)}
+.menu-section .upper{margin-bottom:clamp(20px,2.8vw,34px)}
+
+/* 締めリンク */
+.menu-out{padding-block:var(--sec);text-align:center}

@@ -1,0 +1,17 @@
+/* ============================================================
+   CAFE AOKI — page-news.css（news.html専用の微調整）
+   記事詳細ページが無いため、news-listの行はリンクでなくdiv（.news-row）。
+   base.css の .news-list a と同じグリッド組みを .news-row に適用する。
+   time / .cat / .ttl の見た目は base.css の .news-list 配下ルールをそのまま継承。
+   ============================================================ */
+.news-index{padding-block:var(--sec-lg)}
+.news-index .news-note{margin-top:28px}
+
+.news-list .news-row{
+  display:grid;grid-template-columns:110px 92px 1fr;gap:18px;align-items:baseline;
+  padding:20px 4px;border-bottom:1px solid var(--line);
+}
+
+@media (max-width:767px){
+  .news-list .news-row{grid-template-columns:86px 1fr;grid-template-rows:auto auto;gap:6px 12px}
+}
